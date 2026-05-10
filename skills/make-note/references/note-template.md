@@ -1,0 +1,95 @@
+# Note Template
+
+Use the user's live template at `/home/brian/Note/Templates/General.md` when available:
+
+```markdown
+---
+created: <YYYY-MM-DD>
+author: Brian
+X min read: <N min read>
+tags:
+  - <tag>
+  - <tag>
+---
+# What will learn from this note?
+
+This note <one-sentence learning goal>.
+
+# <Clear Topic Title>
+```
+
+After the title, adapt the following structure to fit the topic:
+
+````markdown
+# Original Request
+
+<Briefly capture what the user wanted to understand or accomplish.>
+
+# Context
+
+<Mention the project, codebase, folder, technology, or working area involved.>
+
+# Main Explanation
+
+<Teach the main concept in a structured way. Prefer flow order for boot/process topics.>
+
+Place useful user questions near the related explanation:
+
+```markdown
+> [!question] <Cleaned-up version of the user's question>
+> **Answer:** <Concise answer from the conversation.>
+>
+> **Related context:** <Concept, command, file, flow, or decision that makes the answer useful later.>
+```
+
+# Key Flow
+
+```text
+<Step-by-step flow or lifecycle.>
+```
+
+# Important Files and Functions
+
+- `<path>`: <why it matters>
+- `<function>`: <what it does>
+
+# Takeaways
+
+- <Important concept>
+- <Important concept>
+
+Use Obsidian Admonition callouts sparingly for important concepts or supplementary context:
+
+```markdown
+> [!tip] Important Concept
+> <Short explanation that deserves emphasis.>
+
+> [!warning] Caveat
+> <Risk, gotcha, or limitation to remember.>
+```
+
+# Follow-Up
+
+<Include follow-up user requests or next study path if relevant.>
+
+# Reference
+
+- `<path or source>`: <why it matters>
+````
+
+Metadata rules:
+
+- `created`: current local date in `YYYY-MM-DD`.
+- `author`: preserve the template value, usually `Brian`.
+- `X min read`: estimate the final note length using about 200 words per minute, rounded up.
+- `tags`: use 2-6 relevant lowercase tags as a YAML list.
+- Keep one blank line between each H1 heading and the following paragraph.
+- Use H1 headings for the main note title and major note sections.
+
+## User's Original Note Prompt
+
+The user's original reusable prompt was:
+
+```text
+can you output our the complete conversation to the folder "Note" and give the title of this file releate to the overall conversation?
+```

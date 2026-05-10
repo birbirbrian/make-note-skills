@@ -1,0 +1,8 @@
+interface:
+  display_name: "Make Note"
+  short_description: "Create notes from active conversations"
+  default_prompt: "Use $make-note to create a structured note from this conversation."
+
+policy:
+  allow_implicit_invocation: true
+

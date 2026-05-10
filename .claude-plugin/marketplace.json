@@ -1,0 +1,14 @@
+{
+  "name": "make-note-skills",
+  "owner": {
+    "name": "Brian"
+  },
+  "plugins": [
+    {
+      "name": "make-note",
+      "source": "./",
+      "description": "Agent skill for creating structured conversation notes",
+      "version": "1.0.0"
+    }
+  ]
+}
