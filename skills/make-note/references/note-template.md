@@ -29,6 +29,12 @@ After the title, adapt the following structure to fit the topic:
 
 <Mention the project, codebase, folder, technology, or working area involved.>
 
+Link important related local notes or concepts with Obsidian wiki links when helpful:
+
+```markdown
+Related notes: [[Agent Skills Specification]], [[Obsidian Admonitions]], [[Conversation Notes]]
+```
+
 # Main Explanation
 
 <Teach the main concept in a structured way. Prefer flow order for boot/process topics.>
@@ -85,6 +91,8 @@ Metadata rules:
 - `tags`: use 2-6 relevant lowercase tags as a YAML list.
 - Keep one blank line between each H1 heading and the following paragraph.
 - Use H1 headings for the main note title and major note sections.
+- Use Obsidian wiki links such as `[[Related Note]]` or `[[Related Note|display text]]` for useful local note connections.
+- Use normal Markdown links for external URLs.
 
 ## User's Original Note Prompt
 

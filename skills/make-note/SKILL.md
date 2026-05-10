@@ -38,9 +38,10 @@ When the user asks to make a note from the conversation:
    - Follow-up requests if relevant.
 8. Preserve code paths and function names exactly. Use fenced code blocks for flows or snippets.
 9. Keep the note readable as a learning artifact. Prefer concise sections over a raw transcript unless the user explicitly asks for a verbatim transcript.
-10. Use Obsidian Admonition sections sparingly for important concepts or supplementary information, following the rules below.
-11. Fill the `# Reference` section with relevant local file paths, function names, or source links used in the conversation.
-12. After writing, tell the user the created file path and the note title.
+10. Use Obsidian wiki links for related notes and reusable concepts, following the rules below.
+11. Use Obsidian Admonition sections sparingly for important concepts or supplementary information, following the rules below.
+12. Fill the `# Reference` section with relevant local file paths, function names, or source links used in the conversation.
+13. After writing, tell the user the created file path and the note title.
 
 ## Question Capture
 
@@ -63,6 +64,26 @@ Question capture rules:
 - If several questions belong to the same topic, group them under a short subsection such as `## Questions About Build Flow`.
 - If the user asks to update an existing note, append or merge the new question block into the related section of that note instead of creating an unrelated note.
 - Use `question` for unresolved or learning questions. If the question reveals a caveat, add a nearby `warning`; if it confirms a result, add a nearby `success`.
+
+## Obsidian Note Links
+
+Use Obsidian wiki links to connect notes when the link improves future navigation or study.
+
+Preferred syntax:
+
+```markdown
+[[Related Note Title]]
+[[Related Note Title|display text]]
+```
+
+Linking rules:
+
+- Use `[[...]]` for related local notes, reusable concepts, project topics, and future notes the user may want to create later.
+- It is okay to link to a note that does not exist yet when the concept is likely to become its own note.
+- Use an alias with `|` when the sentence needs natural wording, for example `[[Agent Skills Specification|Agent Skills spec]]`.
+- Do not wrap code paths, commands, function names, filenames, URLs, or package names in wiki links unless they are also note titles.
+- Keep normal Markdown links for external sources: `[Agent Skills specification](https://agentskills.io/specification)`.
+- Prefer a few useful links over linking every repeated term.
 
 ## Obsidian Admonitions
 
