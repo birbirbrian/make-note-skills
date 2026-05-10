@@ -54,16 +54,16 @@ skills/make-note/SKILL.md
 
 ```text
 make-note-skills/
-|-- .claude-plugin/
-|   `-- marketplace.json
-|-- README.md
-`-- skills/
-    `-- make-note/
-        |-- SKILL.md
-        |-- agents/
-        |   `-- openai.yaml
-        `-- references/
-            `-- note-template.md
+├── .claude-plugin/
+│   └── marketplace.json         # Optional: plugin-style marketplace metadata
+├── README.md                    # Project overview and installation notes
+└── skills/
+    └── make-note/
+        ├── SKILL.md             # Required: metadata + instructions
+        ├── agents/
+        │   └── openai.yaml      # Optional: Codex/OpenAI UI metadata
+        └── references/
+            └── note-template.md # Optional: fallback note template
 ```
 
 # Reference
