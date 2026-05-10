@@ -17,10 +17,9 @@ tags:
 2. <Concrete learning goal tailored to this note.>
 ... Continue only as needed for the note content.
 
-# <Clear Topic Title>
 ```
 
-After the title, adapt the following structure to fit the topic:
+After the learning section, adapt the following structure to fit the topic. Do not add a standalone H1 that only repeats the note title or filename topic:
 
 ````markdown
 # Original Request
@@ -91,10 +90,10 @@ Metadata rules:
 - `author`: preserve the template value, usually `Brian`.
 - `X min read`: estimate the final note length using about 200 words per minute, rounded up.
 - `tags`: use 2-6 relevant lowercase tags as a YAML list.
-- Put `# What will learn from this note?` as the first heading after metadata, before the main note title.
+- Put `# What will learn from this note?` as the first heading after metadata.
 - Use a numbered list of concrete learning goals under `# What will learn from this note?`; choose the number of items based on the note content.
 - Keep one blank line between each H1 heading and the following paragraph.
-- Use H1 headings for the main note title and major note sections.
+- Use H1 headings for major note sections, but do not add a redundant H1 title that only repeats the file/topic name.
 - Use Obsidian wiki links such as `[[Related Note]]` or `[[Related Note|display text]]` for useful local note connections.
 - Use normal Markdown links for external URLs.
 
