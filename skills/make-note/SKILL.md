@@ -30,7 +30,7 @@ When the user asks to make a note from the conversation:
 6. Keep the template's opening learning section as the first heading after metadata, before the main note title.
    - Always leave one blank line between an H1 heading and the paragraph below it.
    - Use H1 headings for the main note title and major note sections, not only for `# What will learn from this note?`.
-   - Under `# What will learn from this note?`, write a numbered list of 2-5 concrete learning goals tailored to the conversation, not a generic paragraph.
+   - Under `# What will learn from this note?`, write a numbered list of concrete learning goals tailored to the conversation, not a generic paragraph. Choose the number of items based on the note content; usually 2-5 items is enough, but use more when the conversation genuinely covers more distinct learning goals.
 7. Include enough conversation context that the note is useful later:
    - User's original goal or question.
    - Important user questions, especially repeated questions, clarification questions, and questions that changed the direction of the explanation.

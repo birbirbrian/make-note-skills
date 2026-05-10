@@ -15,7 +15,7 @@ tags:
 
 1. <Concrete learning goal tailored to this note.>
 2. <Concrete learning goal tailored to this note.>
-3. <Concrete learning goal tailored to this note.>
+... Continue only as needed for the note content.
 
 # <Clear Topic Title>
 ```
@@ -92,7 +92,7 @@ Metadata rules:
 - `X min read`: estimate the final note length using about 200 words per minute, rounded up.
 - `tags`: use 2-6 relevant lowercase tags as a YAML list.
 - Put `# What will learn from this note?` as the first heading after metadata, before the main note title.
-- Use a numbered list of 2-5 concrete learning goals under `# What will learn from this note?`.
+- Use a numbered list of concrete learning goals under `# What will learn from this note?`; choose the number of items based on the note content.
 - Keep one blank line between each H1 heading and the following paragraph.
 - Use H1 headings for the main note title and major note sections.
 - Use Obsidian wiki links such as `[[Related Note]]` or `[[Related Note|display text]]` for useful local note connections.
