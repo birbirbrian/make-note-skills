@@ -53,7 +53,15 @@ Near the end of each note, before `# Reference`, add a `# Learning Recall` secti
 Recall rules:
 
 - Use the same item order as the opening learning-goal list.
-- Give each item a brief answer, usually 1-2 sentences.
+- Format each item as a question and answer pair:
+
+```markdown
+1. Question based on learning goal?
+Answer: Brief answer based on the note.
+```
+
+- The numbered line must be the question. The next line must start with `Answer:`.
+- Give each answer 1-2 sentences.
 - Keep the recall content concrete and based on the note, not generic.
 - Do not introduce new topics in the recall section.
 - If the note has been updated and the learning-goal list changed, update `# Learning Recall` to match.

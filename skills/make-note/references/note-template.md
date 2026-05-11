@@ -81,8 +81,12 @@ Use Obsidian Admonition callouts sparingly for important concepts or supplementa
 
 # Learning Recall
 
-1. <Brief answer to learning goal 1.>
-2. <Brief answer to learning goal 2.>
+1. <Question based on learning goal 1?>
+Answer: <Brief answer based on the note.>
+
+2. <Question based on learning goal 2?>
+Answer: <Brief answer based on the note.>
+
 ... Continue only as needed to match the opening learning-goal list.
 
 # Reference
@@ -98,7 +102,7 @@ Metadata rules:
 - `tags`: use 2-6 relevant lowercase tags as a YAML list.
 - Put `# What will learn from this note?` as the first heading after metadata.
 - Use a numbered list of concrete learning goals under `# What will learn from this note?`; choose the number of items based on the note content.
-- Add `# Learning Recall` before `# Reference` and briefly answer each opening learning goal in the same order.
+- Add `# Learning Recall` before `# Reference`; use question and answer pairs where each numbered item is a question and the next line starts with `Answer:`.
 - Keep one blank line between each H1 heading and the following paragraph.
 - Use H1 headings for major note sections, but do not add a redundant H1 title that only repeats the file/topic name.
 - Use Obsidian wiki links such as `[[Related Note]]` or `[[Related Note|display text]]` for useful local note connections.
