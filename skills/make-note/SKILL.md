@@ -42,8 +42,21 @@ When the user asks to make a note from the conversation:
 9. Keep the note readable as a learning artifact. Prefer concise sections over a raw transcript unless the user explicitly asks for a verbatim transcript.
 10. Use Obsidian wiki links for related notes and reusable concepts, following the rules below.
 11. Use Obsidian Admonition sections sparingly for important concepts or supplementary information, following the rules below.
-12. Fill the `# Reference` section with relevant local file paths, function names, or source links used in the conversation.
-13. After writing, tell the user the created file path and the note title.
+12. Add a closing `# Learning Recall` section before `# Reference`, following the rules below.
+13. Fill the `# Reference` section with relevant local file paths, function names, or source links used in the conversation.
+14. After writing, tell the user the created file path and the note title.
+
+## Learning Recall
+
+Near the end of each note, before `# Reference`, add a `# Learning Recall` section that answers the opening `# What will learn from this note?` list.
+
+Recall rules:
+
+- Use the same item order as the opening learning-goal list.
+- Give each item a brief answer, usually 1-2 sentences.
+- Keep the recall content concrete and based on the note, not generic.
+- Do not introduce new topics in the recall section.
+- If the note has been updated and the learning-goal list changed, update `# Learning Recall` to match.
 
 ## Question Capture
 
