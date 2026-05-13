@@ -111,6 +111,7 @@ Metadata rules:
 - Use underscore-separated note titles with no spaces, for example `OakStream_BIOS_Boot_Flow`.
 - Use inline code for technical identifiers in both Chinese and English notes. For example, write `` `Register`, `Cache`, `SRAM`, `DRAM`, `Storage` ``, not `Register、Cache、SRAM、DRAM、Storage`.
 - Use fenced code blocks for multi-line commands, code snippets, logs, flows, and terminal output.
+- When writing Chinese notes, always use Traditional Chinese characters and Traditional Chinese vocabulary. If a source uses Simplified Chinese, rewrite its meaning in Traditional Chinese while preserving technical identifiers exactly.
 
 ## User's Original Note Prompt
 

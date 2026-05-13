@@ -51,6 +51,8 @@ When the user asks to make a note from the conversation:
 - Before making a note, ask the user whether to write the note in Chinese or English, unless the user already specified the note language in the current request.
 - Write notes in English or Chinese based on the reference information and conversation context.
 - Chinese is allowed and preferred when the source material, user questions, or existing related notes are mainly Chinese.
+- When writing Chinese notes, always use Traditional Chinese characters and Traditional Chinese vocabulary. Do not use Simplified Chinese wording.
+- If a reference website or source is written in Simplified Chinese, understand its meaning and rewrite the note content in Traditional Chinese, while preserving technical identifiers exactly.
 - Keep technical identifiers, code, commands, paths, function names, and source titles in their original form.
 
 ## Basic Formatting

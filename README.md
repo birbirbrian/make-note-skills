@@ -19,6 +19,7 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 - Ask whether to write the note in Chinese or English unless the request already specifies a language.
 - Preserve important questions, answers, decisions, commands, files, and references from the conversation.
 - Support Chinese notes when the source material, user questions, or related notes are mainly Chinese.
+- Use Traditional Chinese characters and vocabulary for Chinese notes, even when Simplified Chinese sources are used as references.
 - Follow Obsidian basic Markdown syntax, including inline code for technical identifiers in both Chinese and English notes.
 - Use Obsidian Admonition callouts for important concepts, caveats, confirmations, and question blocks.
 - Use Obsidian wiki links for referenced Markdown notes under `/home/brian/Note/Zettelkasten`.
@@ -31,6 +32,7 @@ When creating a note, the skill:
 
 - Reads `/home/brian/Note/Templates/General.md` when available.
 - Asks whether the note should be written in Chinese or English unless the request already specifies a language.
+- Rewrites Simplified Chinese source meaning into Traditional Chinese when producing Chinese notes.
 - Preserves commands, paths, code identifiers, function names, package names, and source titles exactly.
 - Formats technical identifier lists with inline code and comma separators, for example `` `Register`, `Cache`, `SRAM`, `DRAM`, `Storage` ``.
 - Converts referenced Markdown notes under `/home/brian/Note/Zettelkasten` into Obsidian wiki links such as `[[Container - Map]]`.
