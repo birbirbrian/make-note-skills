@@ -24,6 +24,28 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 - Review website reference images, save useful ones into `/home/brian/Note/Files/`, and embed them with Obsidian syntax such as `![[image.png]]`.
 - Support note updates by merging new Q&A content into the related section.
 
+# Workflow Details
+
+When creating a note, the skill:
+
+- Reads `/home/brian/Note/Templates/General.md` when available.
+- Asks whether the note should be written in Chinese or English unless the request already specifies a language.
+- Preserves commands, paths, code identifiers, function names, package names, and source titles exactly.
+- Converts referenced Markdown notes under `/home/brian/Note/Zettelkasten` into Obsidian wiki links such as `[[Container - Map]]`.
+- When a website is used as a reference, reviews meaningful images, saves useful ones into `/home/brian/Note/Files/`, and embeds them with Obsidian syntax such as `![[yocto-layer-flow.png]]`.
+
+# Vault Assumptions
+
+The skill is tuned for Brian's Obsidian vault layout:
+
+```text
+/home/brian/Note/
+├── Files/                 # Embedded images and other saved note assets
+├── Templates/
+│   └── General.md         # Preferred live note template
+└── Zettelkasten/          # Existing local notes linked with [[wiki links]]
+```
+
 # Installation
 
 ## Codex CLI
