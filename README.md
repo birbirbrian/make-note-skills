@@ -15,13 +15,14 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 - Create or reuse a project-local `Note/` folder.
 - Read the live user template from `/home/brian/Note/Templates/General.md`.
 - Fall back to `skills/make-note/references/note-template.md` when the live template is unavailable.
-- Generate a clear technical title and filesystem-safe Markdown filename.
+- Generate a clear technical title with underscores instead of spaces, plus a filesystem-safe Markdown filename.
 - Ask whether to write the note in Chinese or English unless the request already specifies a language.
 - Preserve important questions, answers, decisions, commands, files, and references from the conversation.
 - Support Chinese notes when the source material, user questions, or related notes are mainly Chinese.
+- Follow Obsidian basic Markdown syntax, including inline code for technical identifiers in both Chinese and English notes.
 - Use Obsidian Admonition callouts for important concepts, caveats, confirmations, and question blocks.
 - Use Obsidian wiki links for referenced Markdown notes under `/home/brian/Note/Zettelkasten`.
-- Review website reference images, save useful ones into `/home/brian/Note/Files/`, and embed them with Obsidian syntax such as `![[image.png]]`.
+- Review website reference images, save useful ones into `/home/brian/Note/Files/`, embed them with Obsidian syntax such as `![[image.png]]`, and avoid listing local image paths in `# Reference`.
 - Support note updates by merging new Q&A content into the related section.
 
 # Workflow Details
@@ -31,8 +32,9 @@ When creating a note, the skill:
 - Reads `/home/brian/Note/Templates/General.md` when available.
 - Asks whether the note should be written in Chinese or English unless the request already specifies a language.
 - Preserves commands, paths, code identifiers, function names, package names, and source titles exactly.
+- Formats technical identifier lists with inline code and comma separators, for example `` `Register`, `Cache`, `SRAM`, `DRAM`, `Storage` ``.
 - Converts referenced Markdown notes under `/home/brian/Note/Zettelkasten` into Obsidian wiki links such as `[[Container - Map]]`.
-- When a website is used as a reference, reviews meaningful images, saves useful ones into `/home/brian/Note/Files/`, and embeds them with Obsidian syntax such as `![[yocto-layer-flow.png]]`.
+- When a website is used as a reference, reviews meaningful images, saves useful ones into `/home/brian/Note/Files/`, embeds them with Obsidian syntax such as `![[yocto-layer-flow.png]]`, and cites the source page without adding local image asset paths to `# Reference`.
 
 # Vault Assumptions
 
@@ -95,6 +97,7 @@ make-note-skills/
 # Reference
 
 - [Agent Skills specification](https://agentskills.io/specification)
+- [Obsidian basic formatting syntax](https://obsidian.md/help/syntax)
 - [Obsidian embeds](https://obsidian.md/help/embeds)
 - [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)
 - [Obsidian Admonition](https://github.com/ebullient/obsidian-admonition)

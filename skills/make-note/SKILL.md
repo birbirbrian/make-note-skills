@@ -19,7 +19,7 @@ When the user opens a project folder and asks to prepare note-taking support, or
 When the user asks to make a note from the conversation:
 
 1. Read the user's note template at `/home/brian/Note/Templates/General.md` before writing the note. If that file is unavailable, read `references/note-template.md` as the fallback.
-2. Determine the note topic from the conversation. Use a clear technical title, not a generic title.
+2. Determine the note topic from the conversation. Use a clear technical title, not a generic title. The note title must not contain spaces; connect words with underscores when needed.
 3. Create or reuse the workspace `Note/` folder unless the user specifies another location.
 4. Write a Markdown file with a filesystem-safe title, for example `OakStream_BIOS_Boot_Flow_SEC_to_DXE_Conversation.md`.
 5. Start the note by filling the template metadata:
@@ -53,6 +53,15 @@ When the user asks to make a note from the conversation:
 - Chinese is allowed and preferred when the source material, user questions, or existing related notes are mainly Chinese.
 - Keep technical identifiers, code, commands, paths, function names, and source titles in their original form.
 
+## Basic Formatting
+
+Follow Obsidian basic Markdown syntax for both Chinese and English notes:
+
+- Use inline code with single backticks for technical identifiers, commands, filenames, paths, registers, hardware blocks, APIs, function names, constants, and literal values.
+- When listing technical identifiers, format each item as inline code and separate items with commas, not Chinese enumeration punctuation.
+- For example, write `` `Register`, `Cache`, `SRAM`, `DRAM`, `Storage` ``, not `Register、Cache、SRAM、DRAM、Storage`.
+- Use fenced code blocks for multi-line commands, code snippets, logs, flows, and terminal output.
+
 ## Website Images
 
 When the user provides a website as reference material for a note:
@@ -63,14 +72,16 @@ When the user provides a website as reference material for a note:
 - Use clear filenames based on the note topic and image purpose, keeping the original extension when possible.
 - Embed saved images in the note with Obsidian embed syntax, for example `![[yocto-layer-flow.png]]`.
 - Add image dimensions only when it improves readability, for example `![[yocto-layer-flow.png|640]]` or `![[yocto-layer-flow.png|640x480]]`.
-- If the image comes from a website, include the source page URL in `# Reference`.
-- If image download is blocked or the image license/source is unclear, do not invent a replacement; mention the source image in the note or reference section instead.
+- Do not add saved image filenames or local image paths to `# Reference`; the Obsidian embed is enough.
+- If the image comes from a website, include only the source page URL in `# Reference` when that page was used as reference material.
+- If image download is blocked or the image license/source is unclear, do not invent a replacement; mention the source page or source image URL in the note only when it is useful for later study.
 
 ## Reference Rules
 
 - In `# Reference`, if a referenced local Markdown note is under `/home/brian/Note/Zettelkasten`, link it with Obsidian wiki-link syntax instead of a raw file path.
 - Use the note filename without the `.md` extension as the wiki link target, for example `/home/brian/Note/Zettelkasten/Cpp/Container - Map.md` becomes `[[Container - Map]]`.
 - Keep raw paths for non-note files, files outside `Zettelkasten`, code paths, and generated workspace files.
+- Do not include local image asset paths or saved image filenames in `# Reference`, including files saved under `/home/brian/Note/Files/`.
 
 ## Learning Recall
 
@@ -187,8 +198,8 @@ When using a callout:
 ## Title Rules
 
 - Base the title on the overall conversation topic.
-- Use Title Case inside the note heading.
-- Use underscores or hyphens in the filename.
+- The note title must not contain spaces. Use underscores to connect words, for example `OakStream_BIOS_Boot_Flow`.
+- Use the same underscore-separated topic style for filenames.
 - Avoid vague names like `note.md`, `conversation.md`, or `summary.md`.
 - If a file with the same name exists, choose a safe variant such as `_2` rather than overwriting unless the user asks to update it.
 

@@ -107,6 +107,10 @@ Metadata rules:
 - Use H1 headings for major note sections, but do not add a redundant H1 title that only repeats the file/topic name.
 - Use Obsidian wiki links such as `[[Related Note]]` or `[[Related Note|display text]]` for useful local note connections.
 - Use normal Markdown links for external URLs.
+- Do not add saved image filenames or local image paths to `# Reference`; embedded images already identify the image asset.
+- Use underscore-separated note titles with no spaces, for example `OakStream_BIOS_Boot_Flow`.
+- Use inline code for technical identifiers in both Chinese and English notes. For example, write `` `Register`, `Cache`, `SRAM`, `DRAM`, `Storage` ``, not `Register、Cache、SRAM、DRAM、Storage`.
+- Use fenced code blocks for multi-line commands, code snippets, logs, flows, and terminal output.
 
 ## User's Original Note Prompt
 
