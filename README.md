@@ -8,7 +8,7 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 
 | Skill | Description |
 |-------|-------------|
-| [`make-note`](skills/make-note) | Create structured Markdown notes from the current conversation, prepare a project `Note/` folder, capture user questions with answers, and highlight important concepts with Obsidian callouts. |
+| [`make-note`](skills/make-note) | Create structured Markdown notes from the current conversation, prepare a project `Note/` folder, capture user questions with answers, embed useful website images, and highlight important concepts with Obsidian callouts. |
 
 # Key Features
 
@@ -16,8 +16,12 @@ These skills follow the [Agent Skills specification](https://agentskills.io/spec
 - Read the live user template from `/home/brian/Note/Templates/General.md`.
 - Fall back to `skills/make-note/references/note-template.md` when the live template is unavailable.
 - Generate a clear technical title and filesystem-safe Markdown filename.
+- Ask whether to write the note in Chinese or English unless the request already specifies a language.
 - Preserve important questions, answers, decisions, commands, files, and references from the conversation.
+- Support Chinese notes when the source material, user questions, or related notes are mainly Chinese.
 - Use Obsidian Admonition callouts for important concepts, caveats, confirmations, and question blocks.
+- Use Obsidian wiki links for referenced Markdown notes under `/home/brian/Note/Zettelkasten`.
+- Review website reference images, save useful ones into `/home/brian/Note/Files/`, and embed them with Obsidian syntax such as `![[image.png]]`.
 - Support note updates by merging new Q&A content into the related section.
 
 # Installation
@@ -69,5 +73,6 @@ make-note-skills/
 # Reference
 
 - [Agent Skills specification](https://agentskills.io/specification)
+- [Obsidian embeds](https://obsidian.md/help/embeds)
 - [kepano/obsidian-skills](https://github.com/kepano/obsidian-skills)
 - [Obsidian Admonition](https://github.com/ebullient/obsidian-admonition)

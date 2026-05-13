@@ -43,8 +43,34 @@ When the user asks to make a note from the conversation:
 10. Use Obsidian wiki links for related notes and reusable concepts, following the rules below.
 11. Use Obsidian Admonition sections sparingly for important concepts or supplementary information, following the rules below.
 12. Add a closing `# Learning Recall` section before `# Reference`, following the rules below.
-13. Fill the `# Reference` section with relevant local file paths, function names, or source links used in the conversation.
+13. Fill the `# Reference` section with relevant local file paths, function names, note links, or source links used in the conversation, following the reference rules below.
 14. After writing, tell the user the created file path and the note title.
+
+## Note Language
+
+- Before making a note, ask the user whether to write the note in Chinese or English, unless the user already specified the note language in the current request.
+- Write notes in English or Chinese based on the reference information and conversation context.
+- Chinese is allowed and preferred when the source material, user questions, or existing related notes are mainly Chinese.
+- Keep technical identifiers, code, commands, paths, function names, and source titles in their original form.
+
+## Website Images
+
+When the user provides a website as reference material for a note:
+
+- Review the website content and consider all meaningful images on the page, including diagrams, screenshots, tables exported as images, and architecture figures.
+- Include an image only when it improves the learning value of the note; skip decorative, logo-only, tracking, avatar, ad, or unrelated images.
+- Save useful images into `/home/brian/Note/Files/`. Create the folder if needed.
+- Use clear filenames based on the note topic and image purpose, keeping the original extension when possible.
+- Embed saved images in the note with Obsidian embed syntax, for example `![[yocto-layer-flow.png]]`.
+- Add image dimensions only when it improves readability, for example `![[yocto-layer-flow.png|640]]` or `![[yocto-layer-flow.png|640x480]]`.
+- If the image comes from a website, include the source page URL in `# Reference`.
+- If image download is blocked or the image license/source is unclear, do not invent a replacement; mention the source image in the note or reference section instead.
+
+## Reference Rules
+
+- In `# Reference`, if a referenced local Markdown note is under `/home/brian/Note/Zettelkasten`, link it with Obsidian wiki-link syntax instead of a raw file path.
+- Use the note filename without the `.md` extension as the wiki link target, for example `/home/brian/Note/Zettelkasten/Cpp/Container - Map.md` becomes `[[Container - Map]]`.
+- Keep raw paths for non-note files, files outside `Zettelkasten`, code paths, and generated workspace files.
 
 ## Learning Recall
 
